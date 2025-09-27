@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <style>
+        /* (Your existing styles from Login.html)  */
+         * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: #0b0c2a;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            overflow: hidden;
+            position: relative;
+        }
+
+        /* Circles */
+        .circle {
+            position: absolute;
+            border-radius: 50%;
+            background: radial-gradient(circle, #7f5af0aa, transparent 70%);
+            z-index: 0;
+            filter: blur(60px);
+        }
+
+        .circle1 {
+            width: 250px;
+            height: 250px;
+            top: -80px;
+            left: -80px;
+        }
+
+        .circle2 {
+            width: 300px;
+            height: 300px;
+            bottom: -100px;
+            right: -100px;
+        }
+
+        .circle3 {
+            width: 200px;
+            height: 200px;
+            bottom: 100px;
+            left: -50px;
+            background: radial-gradient(circle, #5f39f0aa, transparent 70%);
+        }
+
+        .circle4 {
+            width: 150px;
+            height: 150px;
+            top: 50px;
+            right: 50px;
+            background: radial-gradient(circle, #5f39f0aa, transparent 70%);
+        }
+
+        /* Form Container */
+        .container {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border-radius: 18px;
+            padding: 50px 35px;
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.6);
+            width: 100%;
+            max-width: 380px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            position: relative;
+            z-index: 1;
+        }
+
+        h2 {
+            text-align: center;
+            margin-bottom: 35px;
+            font-size: 2.4em;
+            font-weight: 600;
+            letter-spacing: 1px;
+        }
+
+        form div {
+            margin-bottom: 25px;
+        }
+
+        label {
+            font-size: 0.95em;
+            margin-bottom: 6px;
+            display: block;
+            font-weight: 500;
+            color: #ccc;
+        }
+
+        input[type="text"],
+        input[type="email"] {
+            width: 100%;
+            padding: 12px 10px;
+            background: transparent;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 8px;
+            color: white;
+            font-size: 16px;
+            outline: none;
+            transition: 0.3s border-color ease;
+        }
+
+        input[type="text"]:focus,
+        input[type="email"]:focus {
+            border-color: #7f5af0;
+        }
+
+        button {
+            width: 100%;
+            padding: 14px;
+            margin-top: 15px;
+            background: linear-gradient(135deg, #7f5af0, #5f39f0);
+            border: none;
+            border-radius: 12px;
+            color: white;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: 0.4s;
+            box-shadow: 1px #7f5af0, 1px #5f39f0;
+        }
+
+        button:hover {
+            background: linear-gradient(135deg, #5f39f0, #7f5af0);
+            transform: translateY(-3px);
+            box-shadow: 0 0 18px #7f5af0, 0 0 28px #5f39f0;
+        }
+
+        .Footer {
+            margin-top: 20px;
+            text-align: center;
+            font-size: 0.9em;
+            color: #aaa;
+        }
+
+        .Footer h5 {
+            display: inline;
+        }
+
+        .register-link {
+            color: #7f5af0;
+            text-decoration: none;
+            font-weight: bold;
+            margin-left: 5px;
+        }
+
+        .register-link:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="circle circle1"></div>
+    <div class="circle circle2"></div>
+    <div class="circle circle3"></div>
+    <div class="circle circle4"></div>
+
+    <div class="container">
+        <h2>Login</h2>
+        <form action="login.php" method="POST">
+            <div>
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" placeholder="Your email address" required>
+            </div>
+            <div>
+                <label for="fullName">Full Name</label>
+                <input type="text" id="fullName" name="fullName" placeholder="Your Full Name" required>
+            </div>
+            <button type="submit">Login</button>
+            <div class="Footer">
+                <h5>Don't have an account?</h5>
+                <a href="index.html" class="register-link">Register</a>
+            </div>
+        </form>
+    </div>
+
+</body>
+
+</html>
